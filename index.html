@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>jQuery爆炸效果</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background: #f0fcff;
+			font-family: 'adelle-sans', sans-serif;
+			overflow: hidden;
+			height: 100%;
+		}
+
+		.container {
+			width: 400px;
+			top: 100px;
+				margin: 0px auto;
+		}
+
+		.clipped-box {
+			cursor: pointer;
+
+		}
+		.clipped-box div {
+			z-index: 9999999;
+			color: #fff;
+			font-size: 1em;
+			padding: 50px 20px;
+			text-align: center;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			background: #4F9CC7;
+		}
+
+		.clipped-box, .clipped-box div {
+			width: 400px;
+			height: 400px;
+			position: relative;
+			
+		}
+	</style>
+
+</head>
+<body>
+	<div class="clipped-box">
+		<div class="content genClips-container"></div>
+	</div>		
+	<script src="jquery.js"></script>
+	<script src="jquery-clips.js"></script>
+	<script>
+		$(".clipped-box").genClips({
+			callBack:function(){
+				console.log(0);
+				
+			}
+		})
+	</script>
+</body>
+</html>
+
+
